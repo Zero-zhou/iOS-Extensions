@@ -37,7 +37,8 @@ extension UILabel {
     */
     func ausAttributedText(data: String) {
         do {
-            let text = try NSAttributedString(data: data.dataUsingEncoding(NSUnicodeStringEncoding,allowLossyConversion: false)!,
+            let formatedData = data.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            let text = try NSAttributedString(data: formatedData.dataUsingEncoding(NSUnicodeStringEncoding,allowLossyConversion: false)!,
                 options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
                 documentAttributes: nil)
             self.attributedText = text

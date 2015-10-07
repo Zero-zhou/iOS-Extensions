@@ -3,6 +3,10 @@
 //  iBBS
 //
 //  Created by Augus on 9/8/15.
+//
+//  http://iAugus.com
+//  https://github.com/iAugux
+//
 //  Copyright © 2015 iAugus. All rights reserved.
 //
 
@@ -17,7 +21,8 @@ extension UITextView {
 
     func ausAttributedText(data: String) {
         do {
-            let text = try NSAttributedString(data: data.dataUsingEncoding(NSUnicodeStringEncoding,allowLossyConversion: false)!,
+            let formatedData = data.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            let text = try NSAttributedString(data: formatedData.dataUsingEncoding(NSUnicodeStringEncoding,allowLossyConversion: false)!,
                 options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
                 documentAttributes: nil)
             self.attributedText = text
@@ -27,11 +32,11 @@ extension UITextView {
     }
     
     /**
-    calculate size of text view
+    calculate size of UITextView
     
     :returns: CGSize
     */
-    func ausTextViewFrameSize() -> CGSize{
+    func ausReturnFrameSizeAfterResizingTextView() -> CGSize{
         let fixedWidth = self.frame.size.width
         self.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
         let newSize = self.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
@@ -40,5 +45,14 @@ extension UITextView {
         self.frame = newFrame
         return self.frame.size
     }
+    
+    
+}
 
+
+func AusTextViewSizeForAttributedText(text: String) -> CGSize {
+    let calculationView = UITextView()
+    calculationView.ausAttributedText(text)
+    let size = calculationView.sizeThatFits(CGSizeMake(CGFloat.max, CGFloat.max))
+    return size
 }
