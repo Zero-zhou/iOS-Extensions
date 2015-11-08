@@ -6,14 +6,14 @@
 //  Copyright © 2015 iAugus. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIScreen {
-    func screenWidth() -> CGFloat {
+    class func screenWidth() -> CGFloat {
         return UIScreen.mainScreen().bounds.width
     }
     
-    func screenHeight() -> CGFloat {
+    class func screenHeight() -> CGFloat {
         return UIScreen.mainScreen().bounds.height
     }
 }

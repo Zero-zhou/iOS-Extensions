@@ -1,33 +1,16 @@
 //
 //  UILabel+Additions.swift
-//  iAugus
+//  iBBS
 //
-//  Created by Augus on 6/7/15.
-//  Copyright (c) 2015 Augus. All rights reserved.
+//  Created by Augus on 9/8/15.
+//
+//  http://iAugus.com
+//  https://github.com/iAugux
+//
+//  Copyright © 2015 iAugus. All rights reserved.
 //
 
-import UIKit
-
-// calculate size of UILabel with string
-func ausFrameSizeForText(text: NSString, maximumSize: CGSize) -> CGRect{
-    let attrString = NSAttributedString(string: text as String)
-    return attrString.boundingRectWithSize(maximumSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
-    
-}
-
-func ausFrameSizeForText(text: NSString, font: UIFont, maximumSize: CGSize) -> CGRect{
-    return text.boundingRectWithSize(maximumSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
-}
-
-func ausFrameSizeForText(label: UILabel, text: NSString, maximum: CGSize) -> CGRect{
-    label.attributedText = NSAttributedString(string: text as String)
-    let requireSize = label.sizeThatFits(maximum)
-    var labelFrame = label.frame
-    labelFrame.size.height = requireSize.height
-    label.frame = labelFrame
-    return label.frame
-}
-
+import Foundation
 
 extension UILabel {
     
@@ -46,4 +29,20 @@ extension UILabel {
             print("something error with NSAttributedString")
         }
     }
+    
+    /**
+    calculate size of UILabel
+    
+    :returns: CGSize
+    */
+    func ausReturnFrameSizeAfterResizingLabel() -> CGSize{
+        let fixedWidth = self.frame.size.width
+        self.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
+        let newSize = self.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
+        var newFrame = self.frame
+        newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+        self.frame = newFrame
+        return self.frame.size
+    }
+
 }
