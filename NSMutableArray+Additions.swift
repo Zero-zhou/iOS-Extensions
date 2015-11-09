@@ -20,12 +20,11 @@ extension NSMutableArray {
      - returns: return the new array.
      */
     func ausInsertNewElementRemoveLastOne(newValue newValue: NSObject, maxLenght: Int) -> NSMutableArray {
-        let mutableArray = self
         if self.count >= maxLenght {
-            mutableArray.removeLastObject()
+            self.removeLastObject()
         }
-        mutableArray.insertObject(newValue, atIndex: 0)
-        return mutableArray
+        self.insertObject(newValue, atIndex: 0)
+        return self
     }
     
     /**
@@ -37,10 +36,44 @@ extension NSMutableArray {
      - returns: return the new array.
      */
     func ausInsertNewElementRemoveLastOne(newValue newValue: NSObject) -> NSMutableArray {
-        let mutableArray = self
-        mutableArray.removeLastObject()
-        mutableArray.insertObject(newValue, atIndex: 0)
-        return mutableArray
+        self.removeLastObject()
+        self.insertObject(newValue, atIndex: 0)
+        return self
     }
     
+    /**
+     if array contains the new object, just move it to fisrt index.
+     */
+    func ausFilterInsertNewElementRemoveLastOne(newValue newValue: NSObject, maxLenght: Int) -> NSMutableArray {
+        if self.containsObject(newValue) {
+            let index = self.indexOfObject(newValue)
+            self.ausMoveObjectAtIndex(fromIndex: index, toIndex: 0)
+            return self
+        } else {
+            self.ausInsertNewElementRemoveLastOne(newValue: newValue, maxLenght: maxLenght)
+            return self
+        }
+    }
+    
+    /**
+     if array contains the new object, just move it to fisrt index.
+     */
+    func ausFilterInsertNewElementRemoveLastOne(newValue newValue: NSObject) -> NSMutableArray {
+        if self.containsObject(newValue) {
+            let index = self.indexOfObject(newValue)
+            self.ausMoveObjectAtIndex(fromIndex: index, toIndex: 0)
+            return self
+        } else {
+            self.ausInsertNewElementRemoveLastOne(newValue: newValue)
+            return self
+        }
+    }
+    
+    func ausMoveObjectAtIndex(fromIndex fromIndex: Int, toIndex: Int) {
+        if fromIndex < self.count && toIndex < self.count {
+            let object = self.objectAtIndex(fromIndex)
+            self.removeObjectAtIndex(fromIndex)
+            self.insertObject(object, atIndex: toIndex)
+        }
+    }
 }
