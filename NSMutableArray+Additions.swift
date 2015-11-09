@@ -20,11 +20,12 @@ extension NSMutableArray {
      - returns: return the new array.
      */
     func ausInsertNewElementRemoveLastOne(newValue newValue: NSObject, maxLenght: Int) -> NSMutableArray {
+        let mutableArray = self
         if self.count >= maxLenght {
-            self.removeLastObject()
+            mutableArray.removeLastObject()
         }
-        self.insertObject(newValue, atIndex: 0)
-        return self
+        mutableArray.insertObject(newValue, atIndex: 0)
+        return mutableArray
     }
     
     /**
@@ -36,9 +37,10 @@ extension NSMutableArray {
      - returns: return the new array.
      */
     func ausInsertNewElementRemoveLastOne(newValue newValue: NSObject) -> NSMutableArray {
-        self.removeLastObject()
-        self.insertObject(newValue, atIndex: 0)
-        return self
+        let mutableArray = self
+        mutableArray.removeLastObject()
+        mutableArray.insertObject(newValue, atIndex: 0)
+        return mutableArray
     }
     
 }
