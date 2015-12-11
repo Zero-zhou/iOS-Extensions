@@ -1,6 +1,5 @@
 //
 //  NSMutableArray+Additions.swift
-//  iTranslator
 //
 //  Created by Augus on 11/8/15.
 //  Copyright © 2015 iAugus. All rights reserved.

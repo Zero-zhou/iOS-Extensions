@@ -1,6 +1,5 @@
 //
 //  Utils.swift
-//  iTranslator
 //
 //  Created by Augus on 11/10/15.
 //  Copyright © 2015 iAugus. All rights reserved.

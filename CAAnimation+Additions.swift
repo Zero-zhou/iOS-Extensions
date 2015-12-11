@@ -1,6 +1,5 @@
 //
 //  CAAnimation+Additions.swift
-//  iBBS
 //
 //  Created by Augus on 10/10/15.
 //  Copyright © 2015 iAugus. All rights reserved.

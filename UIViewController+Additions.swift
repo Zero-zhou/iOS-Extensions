@@ -1,6 +1,5 @@
 //
 //  UIViewController+Additions.swift
-//  iBBS
 //
 //  Created by Augus on 9/30/15.
 //  Copyright © 2015 iAugus. All rights reserved.

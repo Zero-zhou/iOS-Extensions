@@ -1,6 +1,5 @@
 //
 //  TopMostViewController+Additions.swift
-//  iBBS
 //
 //  Created by Augus on 9/26/15.
 //  Copyright © 2015 iAugus. All rights reserved.

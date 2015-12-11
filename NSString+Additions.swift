@@ -1,6 +1,5 @@
 //
 //  NSString+Addtions.swift
-//  iBBS
 //
 //  Created by Augus on 9/5/15.
 //  Copyright © 2015 iAugus. All rights reserved.

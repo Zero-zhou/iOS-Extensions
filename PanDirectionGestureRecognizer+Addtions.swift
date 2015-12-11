@@ -1,6 +1,5 @@
 //
 //  PanDirectionGestureRecognizer+Addtions.swift
-//  TinderSwipeCellSwift
 //
 //  Created by Augus on 8/23/15.
 //  Copyright © 2015 iAugus. All rights reserved.
