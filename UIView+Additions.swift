@@ -42,4 +42,15 @@ extension UIView {
         frame.origin.y = originY
         self.frame = frame
     }
+
+    /**
+     set current view's absolute center to other view's center
+     
+     - parameter view: other view
+     */
+    func centerTo(view view: UIView) {
+        self.frame.origin.x = view.bounds.midX - self.frame.width / 2
+        self.frame.origin.y = view.bounds.midY - self.frame.height / 2
+        
+    }
 }
