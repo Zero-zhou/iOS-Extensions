@@ -1,5 +1,5 @@
 //
-//  UIImageView+Additions.swift
+//  UIImageView+Extension.swift
 //
 //  Created by Augus on 10/11/15.
 //  Copyright © 2015 iAugus. All rights reserved.

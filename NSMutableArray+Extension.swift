@@ -1,5 +1,5 @@
 //
-//  NSMutableArray+Additions.swift
+//  NSMutableArray+Extension.swift
 //
 //  Created by Augus on 11/8/15.
 //  Copyright © 2015 iAugus. All rights reserved.

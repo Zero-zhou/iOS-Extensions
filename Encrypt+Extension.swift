@@ -1,5 +1,5 @@
 //
-//  Encrypt+Additions.swift
+//  Encrypt+Extension.swift
 //
 //  Created by Augus on 9/24/15.
 //  Copyright © 2015 iAugus. All rights reserved.

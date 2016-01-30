@@ -1,5 +1,5 @@
 //
-//  UIView+Additions.swift
+//  UIView+Extension.swift
 //
 //  Created by Augus on 9/4/15.
 //

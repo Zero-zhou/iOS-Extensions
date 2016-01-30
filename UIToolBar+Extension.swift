@@ -1,5 +1,5 @@
 //
-//  UIToolBar+Additions.swift
+//  UIToolBar+Extension.swift
 //
 //  Created by Augus on 12/7/15.
 //  Copyright © 2015 iAugus. All rights reserved.

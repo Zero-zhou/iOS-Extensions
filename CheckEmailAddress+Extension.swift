@@ -1,5 +1,5 @@
 //
-//  CheckEmailAddress+Additions.swift
+//  CheckEmailAddress+Extension.swift
 //
 //  Created by Augus on 10/3/15.
 //  Copyright © 2015 iAugus. All rights reserved.

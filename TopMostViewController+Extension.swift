@@ -1,5 +1,5 @@
 //
-//  TopMostViewController+Additions.swift
+//  TopMostViewController+Extension.swift
 //
 //  Created by Augus on 9/26/15.
 //  Copyright © 2015 iAugus. All rights reserved.

@@ -1,5 +1,5 @@
 //
-//  UILabel+Additions.swift
+//  UILabel+Extension.swift
 //
 //  Created by Augus on 6/7/15.
 //  Copyright (c) 2015 Augus. All rights reserved.

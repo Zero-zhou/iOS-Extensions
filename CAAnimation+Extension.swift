@@ -1,5 +1,5 @@
 //
-//  CAAnimation+Additions.swift
+//  CAAnimation+Extension.swift
 //
 //  Created by Augus on 10/10/15.
 //  Copyright © 2015 iAugus. All rights reserved.

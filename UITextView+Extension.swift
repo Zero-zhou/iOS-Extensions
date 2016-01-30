@@ -1,5 +1,5 @@
 //
-//  UITextView+Additions.swift
+//  UITextView+Extension.swift
 //
 //
 //  Created by Augus on 9/8/15.
